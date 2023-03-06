@@ -10,14 +10,13 @@ def insta():
   driver = webdriver.Chrome(options=options)
   driver.get("https://www.instagram.com")
   sleep(2)
-  driver.find_element(By.XPATH ,'//input[@name="username"]').send_keys("xmos640")
-  driver.find_element(By.XPATH ,'//input[@name="password"]').send_keys("dBZPOKEBEN10")
+  driver.find_element(By.XPATH ,'//input[@name="username"]').send_keys(username)
+  driver.find_element(By.XPATH ,'//input[@name="password"]').send_keys(password)
   driver.find_element(By.XPATH ,'//button[@type="submit"]').click()
   sleep(5)
   driver.find_element(By.XPATH ,'//button[text()="Not Now"]').click()
-  sleep(3)
-  driver.find_element(By.XPATH ,'//button[text()="Not Now"]').click()
   sleep(2)
+  driver.find_element(By.XPATH ,'//button[text()="Not Now"]').click()
   os.system("taskkill /F /im chromedriver.exe")
  
   
